@@ -16,3 +16,34 @@ The directory structure of the repo (the file names are not final - simply show 
    ---(probably)use_regex_to_check_stuff_in_url.py
    ---override_defaults.py
    ---run_it.py
+
+On opening routing.py, something like this will show:
+
+#### browser_window ##################
+
+------------------------------------
+https://127/168/xx/
+------------------------------------
+Browser Client: ____ (default: Chrome)
+URL: ____
+
+#### browser_window ##################
+
+Once the URL is entered, man can add args onto the URL:
+
+#### browser_window ##################
+
+------------------------------------
+https://127/168/xx/?rtc=true/keys=return/
+------------------------------------
+Browser Client: ____ (default: Chrome)
+URL: python.org
+
+#### browser_window ##################
+
+Here, `rtc=true` stands for 'Right Click = true', so a right click is performed.
+`keys=return` sends the RETURN key onto the webpage.
+
+By default (specified in defaults.py), the window closes upon execution of code.
+
+

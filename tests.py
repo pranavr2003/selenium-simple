@@ -1,4 +1,4 @@
-# sudo pt install chromium-chromedriver (only for armhf)
+# sudo apt install chromium-chromedriver (only for armhf)
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
