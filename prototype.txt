@@ -1,0 +1,16 @@
+Create a flask_routing.py, where the person runs it, and routes to 
+https://127.168.xx/. Something like:
+
+The directory structure of the repo (the file names are not final - simply show what the file does):
+
+/pranavr2003/selenium-simple
+
+--LICENSE
+--README.md
+--src
+   |
+   ---routing.py
+   ---key_funcs_like_return.py
+   ---get_ELEMENT_by_x.py
+   ---set_defaults.py
+   ---(probably)use_regex_to_check_stuff_in_url.py
