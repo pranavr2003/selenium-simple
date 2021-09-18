@@ -44,6 +44,6 @@ URL: python.org
 Here, `rtc=true` stands for 'Right Click = true', so a right click is performed.
 `keys=return` sends the RETURN key onto the webpage.
 
-By default (specified in defaults.py), the window closes upon execution of code.
+By default (specified in defaults.py), the window des not close upon execution of code.
 
 
