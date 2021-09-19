@@ -1,3 +1,5 @@
+# Simple test from tests.py
+
 from flask import Flask
 from flask import render_template
 
