@@ -22,7 +22,7 @@ On opening routing.py, something like this will show:
 #### browser_window ##################
 
 ------------------------------------
-https://127/168/xx/
+https://127.168.xx/
 ------------------------------------
 Browser Client: ____ (default: Chrome)
 URL: ____
@@ -34,7 +34,7 @@ Once the URL is entered, man can add args onto the URL:
 #### browser_window ##################
 
 ------------------------------------
-https://127/168/xx/?rtc=true?keys=return/
+https://127.168.xx/?rtc=true?keys=return/
 ------------------------------------
 Browser Client: ____ (default: Chrome)
 URL: python.org
