@@ -1,6 +1,3 @@
-Create a flask_routing.py, where the person runs it, and routes to 
-https://127.168.xx/. Something like:
-
 The directory structure of the repo (the file names are not final - simply show what the file does):
 
 /pranavr2003/selenium-simple
@@ -9,7 +6,6 @@ The directory structure of the repo (the file names are not final - simply show 
 --README.md
 --src
    |
-   ---routing.py
    ---key_funcs_like_return.py
    ---get_ELEMENT_by_x.py
    ---set_defaults.py
@@ -17,32 +13,14 @@ The directory structure of the repo (the file names are not final - simply show 
    ---override_defaults.py
    ---run_it.py
 
-On opening routing.py, something like this will show:
+On executing `run_it.py`, the user is prompted to enter a valid selenium-simple address. The code is then 
+executed.
 
-#### browser_window ##################
+For example:
 
-------------------------------------
-https://127.168.xx/
-------------------------------------
-Browser Client: ____ (default: Chrome)
-URL: ____
+sel-simple/https://python.org/^assert "Python" in title^/?febn=q/c/k-pycon?K-RETURN/}
 
-#### browser_window ##################
-
-Once the URL is entered, man can add args onto the URL:
-
-#### browser_window ##################
-
-------------------------------------
-https://127.168.xx/?rtc=true?keys=return/
-------------------------------------
-Browser Client: ____ (default: Chrome)
-URL: python.org
-
-#### browser_window ##################
-
-Here, `rtc=true` stands for 'Right Click = true', so a right click is performed.
-`keys=return` sends the RETURN key onto the webpage.
+This address executes `tests.py. The `}` at the end indictes that the window must be closed upon execution
 
 By default (specified in defaults.py), the window des not close upon execution of code.
 
