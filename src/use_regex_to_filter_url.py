@@ -1,11 +1,14 @@
 import re
 
-ex_str = r'sel-simple/|https://www.google.com|/^assert "Python" in title^/?febn=q/c/k-pycon?K-RETURN/}'
-test_str = list(ex_str)
+ex_str = r'sel-simple/|https://www.python.org|/^assert "Python" in title^/?febn=q/c/k-pycon?K-RETURN/}'
+
 
 # get url with regex, remove |url| from the input, return it.
 
-def filter_stuff(sel_str):
+def filter_stuff(sel_str:str):
+    """Filters the input route and returns the URL and the route minus the URL
+    """
+    test_str = list(sel_str)
     get_url_and_remove = re.findall("\\|(.*?)\\|", sel_str)
 
     for item in get_url_and_remove:
@@ -25,6 +28,5 @@ def filter_stuff(sel_str):
     
     return [final_str, get_url_from_route]
 
-# print(filter_stuff(ex_str))
-# print(get_url_from_route)
+    # print(final_str, get_url_from_route)
 
