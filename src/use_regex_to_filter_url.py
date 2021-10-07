@@ -7,6 +7,8 @@ ex_str = r'sel-simple/|https://www.python.org|/^assert "Python" in title^/?febn=
 
 def filter_stuff(sel_str:str):
     """Filters the input route and returns the URL and the route minus the URL
+
+    The URL must follow the specified guidelines
     """
     test_str = list(sel_str)
     get_url_and_remove = re.findall("\\|(.*?)\\|", sel_str)
