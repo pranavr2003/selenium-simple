@@ -29,4 +29,3 @@ def filter_stuff(sel_str):
 print(filter_stuff(ex_str))
 print(get_url_from_route)
 
-
