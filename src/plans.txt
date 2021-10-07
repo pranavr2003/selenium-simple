@@ -1,6 +1,0 @@
-?headless=true
-?febn=q
-?clear=true
-?send_keys=whatever_keys
-?send_out_to=/path/to/file.txt (compulsory argument)
-
