@@ -3,15 +3,13 @@ import re
 ex_str = r'sel-simple/|https://www.google.com|/^assert "Python" in title^/?febn=q/c/k-pycon?K-RETURN/}'
 test_str = list(ex_str)
 
-# get url with regex, remove |url| from the input, return it. globalized url, hope the lord forgives me
+# get url with regex, remove |url| from the input, return it.
 
 def filter_stuff(sel_str):
     get_url_and_remove = re.findall("\\|(.*?)\\|", sel_str)
 
     for item in get_url_and_remove:
         get_url_and_remove = list(item)
-
-        global get_url_from_route   # im sorry
         get_url_from_route = item
 
     get_len = len(get_url_and_remove)
@@ -25,7 +23,7 @@ def filter_stuff(sel_str):
     final_list = test3_str + url_subtracted_list
     final_str = ''.join(final_list)
     
-    return final_str
+    return [final_str, get_url_from_route]
 
 # print(filter_stuff(ex_str))
 # print(get_url_from_route)
