@@ -20,8 +20,21 @@ For example:
 
 sel-simple/https://python.org/^assert "Python" in title^/?febn=q/c/k-pycon?K-RETURN/}
 
-This address executes `tests.py. The `}` at the end indictes that the window must be closed upon execution
+This address executes tests.py. The `}` at the end indictes that the window must be closed upon execution
 
 By default (specified in defaults.py), the window des not close upon execution of code.
+
+^ - Raw Python Code {
+   .../^print('yee')^/^print('ha')^ goes in two different lines.
+   Maybe if statements, loops *can* be brought in with usage of different ^s. 
+   For example:
+   .../^if spurs == 'league_leaders':^/^^print("ain't gonna last long")^^/
+   This will be equivalent to:
+   ```
+   if spurs == 'league_leaders':
+       print("ain't gonna last long")
+   ```
+   In the sense, each extra ^ is equivalent to an indent
+} 
 
 
