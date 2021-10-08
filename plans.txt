@@ -18,15 +18,17 @@ executed.
 
 For example:
 
-sel-simple/https://python.org/^assert "Python" in title^/?febn=q/c/k-pycon?K-RETURN/}
+sel-simple/|https://python.org|/#user-data-dir=C:\Users\SONY\AppData\Local\Google\Chrome\User Data/#profile-directory=Default/^assert "Python" in title^/?febn=q/c/k-pycon?K-RETURN/}
 
 This address executes tests.py. The `}` at the end indictes that the window must be closed upon execution
 
 By default (specified in defaults.py), the window des not close upon execution of code.
 
+ALL of `/` apart from that of the route structure itself must be replaced by `|`
+
 ^ - Raw Python Code {
    .../^print('yee')^/^print('ha')^ goes in two different lines.
-   Maybe if statements, loops *can* be brought in with usage of different ^s. 
+   if statements, loops, regular code *can* be brought in with usage of different ^s. 
    For example:
    .../^if spurs == 'league_leaders':^/^^print("ain't gonna last long")^^/
    This will be equivalent to:
@@ -36,5 +38,12 @@ By default (specified in defaults.py), the window des not close upon execution o
    ```
    In the sense, each extra ^ is equivalent to an indent
 } 
+
+# - Adds argument to options using options.add_argument()
+
+Maybe do for item in url:
+
+   do_this()
+   do_that() ...
 
 
