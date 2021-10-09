@@ -1,4 +1,5 @@
 from check_if_valid_url import *
+from selenium import webdriver
 
 def str_to_py_code(get_input_str:str):
     """Converts the given string starting with `^` to Python code \n
@@ -11,7 +12,7 @@ def str_to_py_code(get_input_str:str):
         keep_indent_count = -1
         check_indent_count = int(keep_indent_count + count_divided)
 
-        code_to_exec = '\n' + '    '*check_indent_count + get_input_str.replace('^', '')
+        code_to_exec = '\n' + '    '*check_indent_count + get_input_str.replace('^', '').replace('\\', '/')
 
         return code_to_exec
 
@@ -32,6 +33,8 @@ def char_to_py_code(url):
         else:
             pass
 
-    exec(store_code_to_exec)
+    # driver = add_arg_options(url)
 
-# char_to_py_code("sel-simple/|google.com|/^if 1==2:^/^^print('yo mama')^^/^else:^/^^print('yee')^^/")
+    return store_code_to_exec
+
+# char_to_py_code(r'sel-simple/|google.us|/^from selenium import webdriver^/^driver = webdriver.Chrome()^/^driver.get("http:\\www.python.org")^/^assert "Python" in driver.title^/?febn=q/c/k-pycon?K-RETURN/}/')
