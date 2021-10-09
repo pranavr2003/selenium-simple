@@ -2,10 +2,11 @@ import re
 
 ex_str = r'sel-simple/|https://www.python.org|/^assert "Python" in title^/?febn=q/c/k-pycon?K-RETURN/}'
 
+# global get_url_from_route
 
 # get url with regex, remove |url| from the input, return it.
 
-def filter_stuff(sel_str:str):
+def filter_stuff(sel_str:str, get_url_from_route=''):
     """Filters the input route and returns the URL and the route minus the URL
 
     The URL must follow the specified guidelines
@@ -31,4 +32,5 @@ def filter_stuff(sel_str:str):
     return [final_str, get_url_from_route]
 
     # print(final_str, get_url_from_route)
+# print(filter_stuff(r'sel-simple/|google.us|/^from selenium import webdriver^/^driver = webdriver.Chrome()^/#user-data-dir=C:\Users\SONY\AppData\Local\Google\Chrome\User Data/#profile-directory=Default/^print("yeet")^/?febn=q/c/k-pycon?K-RETURN/}'))
 

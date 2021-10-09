@@ -21,6 +21,5 @@ def check_if_valid_url(url):
     return [route.split('/'), url_to_use]
 
 # print(check_if_valid_url(ex_str))
-
-# print(check_if_valid_url(ex_str))
+# print(check_if_valid_url(r'sel-simple/|google.us|/^from selenium import webdriver^/^driver = webdriver.Chrome()^/#user-data-dir=C:\Users\SONY\AppData\Local\Google\Chrome\User Data/#profile-directory=Default/^print("yeet")^/?febn=q/c/k-pycon?K-RETURN/}'))
 

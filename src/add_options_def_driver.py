@@ -42,7 +42,17 @@ def add_arg_options(url):
     driver = webdriver.Chrome(executable_path=r'C:\Windows\chromedriver.exe', chrome_options=option)
     # driver.get(filter_stuff(url)[1])
 
-    return driver
+    # route_with_driver_def = check_if_valid_url(url)[0]
+
+    # route_with_driver_def.insert(3, r"^from selenium import webdriver^")
+    # route_with_driver_def.insert(2, "^from selenium.webdriver.chrome import options^")
+    # route_with_driver_def.insert(3, "^from selenium.webdriver.chrome.options import Options^")
+    # route_with_driver_def.insert(4, r"^driver = webdriver.Chrome()^")
+
+    driver.get(filter_stuff(url)[1])
+    exec(char_to_py_code(url))
 
 # add_arg_options(test_str).get(filter_stuff(test_str)[1])
+
+# THERE'S NO DRIVER.GET!!!! Added now.
 
