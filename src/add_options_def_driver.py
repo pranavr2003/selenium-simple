@@ -39,7 +39,7 @@ def add_arg_options(url):
 
     option.add_experimental_option("detach", True)
 
-    driver = webdriver.Chrome(executable_path=r'C:\Windows\chromedriver.exe', chrome_options=option)
+    driver = webdriver.Chrome(chrome_options=option)
     # driver.get(filter_stuff(url)[1])
 
     # route_with_driver_def = check_if_valid_url(url)[0]
