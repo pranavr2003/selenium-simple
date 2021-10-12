@@ -3,20 +3,18 @@ import re
 ex_str = r'sel-simple/|https://www.python.org|/^assert "Python" in title^/?febn=q/c/k-pycon?K-RETURN/}'
 
 # global get_url_from_route
-
 # get url with regex, remove |url| from the input, return it.
 
 def filter_stuff(sel_str:str, get_url_from_route=''):
     """Filters the input route and returns the URL and the route minus the URL
 
-    The URL must follow the specified guidelines
-    """
+    The URL must follow the specified guidelines."""
     test_str = list(sel_str)
     get_url_and_remove = re.findall("\\|(.*?)\\|", sel_str)
 
-    for item in get_url_and_remove:
-        get_url_and_remove = list(item)
-        get_url_from_route = item
+    #for item in get_url_and_remove:
+    #    get_url_and_remove = list(item)
+    #    get_url_from_route = item
 
     get_len = len(get_url_and_remove)
     test2_str = test_str[12:]
