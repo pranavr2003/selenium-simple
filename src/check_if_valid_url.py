@@ -4,8 +4,7 @@ import warnings
 # ex_str = r'sel-simple/|https://www.python.org/|/^assert "Python" in title^/?febn=q/c/k-pycon?K-RETURN/}'
 
 def check_if_valid_url(url):
-    """Checks if the URL is in the correct format
-    """
+    """Checks if the URL is in the correct format."""
 
     getting_route_data = filter_stuff(url)
     route = getting_route_data[0]
@@ -16,8 +15,8 @@ def check_if_valid_url(url):
     if route.startswith('sel-simple'):
         pass
     else:
-        print(warnings.WarningMessage("The route must start with 'sel-simple/|URL|...'", UserWarning, 'check_if_valid_url.py', 12))
-
+        warnings.simplefilter('error', UserWarning)
+        warnings.warn("The route must start with 'sel-simple/|URL|...'")
     return [route.split('/'), url_to_use]
 
 # print(check_if_valid_url(ex_str))
