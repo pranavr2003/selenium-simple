@@ -32,18 +32,16 @@ def add_arg_options(url):
             arg_to_add = item.replace('#', '').replace('\\', raw_double_bslash)
             # print(arg_to_add)
             option.add_argument(str(arg_to_add))
-
         else:
-            print(warnings.WarningMessage("The route MUST specify a Chrome Profile to execute from", UserWarning, 'add_options_def_driver.py', 32))
-        
+            warnings.simplefilter('error', UserWarning)
+            warnings.warn("The route MUST specify a Chrome Profile to execute from.")
 
     option.add_experimental_option("detach", True)
 
     driver = webdriver.Chrome(chrome_options=option)
+
     # driver.get(filter_stuff(url)[1])
-
     # route_with_driver_def = check_if_valid_url(url)[0]
-
     # route_with_driver_def.insert(3, r"^from selenium import webdriver^")
     # route_with_driver_def.insert(2, "^from selenium.webdriver.chrome import options^")
     # route_with_driver_def.insert(3, "^from selenium.webdriver.chrome.options import Options^")
