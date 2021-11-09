@@ -30,13 +30,14 @@ def add_arg_options(url):
     for item in get_split_list:
         if item.startswith('#'):
             arg_to_add = item.replace('#', '')
-            if arg_to_add.startswith(r'C:'):
+            if arg_to_add.startswith(r'user-data-dir=C:'):
                 arg_to_add = arg_to_add.replace('\\', raw_double_bslash)
+                print(arg_to_add)
                 option.add_argument(str(arg_to_add))
 
             else:
                 arg_to_add = arg_to_add.replace('\\', r'/')
-                # print(arg_to_add)
+                print(arg_to_add)
             
                 option.add_argument(str(arg_to_add))
 
