@@ -9,7 +9,6 @@ def main_to_ex(url):
 
     filter_stuff(url)
     check_if_valid_url(url)
-    
     add_arg_options(url)
 
 
