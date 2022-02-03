@@ -1,5 +1,20 @@
 # selenium-simple
 
-Selenium Simple is a simple URL routing based system for browser automation. This is especially useful for people who need to automate simple tasks on a regular basis with not a line of code being involved
+Selenium Simple is a simple URL routing based system for browser automation. 
 
+People who need to automate tasks on a regular basis will find this easy and useful.    
+People who heavy work can use this to make short processes easier: 
 
+```py
+
+sel_simple('sel-simple/|URL|/...')
+
+driver.do_something()
+if 'something' not in driver.title:
+  do_something_else()
+  
+# Rest of the code
+
+```
+
+In works. 
